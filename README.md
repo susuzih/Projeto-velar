@@ -1,2 +1,3 @@
-# Projeto-velar  front-end / backend 
+# Projeto-velar  
 Loja de cosméticos femininos e masculinos
+front-end / backend 
