@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Loja</title>
+    <link href="/Modelo teste/front/frontend/public/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="/Modelo teste/front/frontend/public/assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/assets/css/estilo.css">
+</head>
+<body>
+    <!-- Inclui o Cabeçalho -->
+    <div id="header"></div>
+
+    <!-- Conteúdo -->
+    <main class="container my-5" style="background-color: #cae6b2;">
+        <h1 class="text-center mb-4" style="color: #8e3e63;">Carrinho de Compras</h1>
+
+        <div class="row">
+            <!-- Tabela de Carrinho -->
+            <div class="col-lg-8">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Preço Unitário</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="/Modelo teste/front/frontend/public/assets/img/img2.jpg" alt="make simples" class="img-fluid me-3">
+                                   
+                                </div>
+                            </td>
+                            <td>
+                                <p>Kit Make Simple Edition(4 Produtos)
+                                </p>
+                                <input type="number" class="form-control" value="1" min="1">
+                            </td>
+                            <td>R$ 160,90</td>
+                            <td>R$ 160,90</td>
+                            <td><button class="btn btn-danger">Remover</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="/Modelo teste/front/frontend/public/assets/img/skin1.jpg" alt="kit creamy skin care" class="img-fluid me-3">
+                                    
+                                </div>
+                            </td>
+                            <td>
+                                <p>Kit Creamy Skincare Rotina Antiacne</p>
+                                <input type="number" class="form-control" value="2" min="1">
+                            </td>
+                            <td>R$ 277,95</td>
+                            <td>R$ 277,95</td>
+                            <td><button class="btn btn-danger">Remover</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="btn btn-secondary" style="background-color: teal;">Atualizar Carrinho</button>
+                    <button class="btn btn-primary" style="background-color: #8e3e63;border:#8e3e63">Finalizar Compra</button>
+                </div>
+            </div>
+
+            <!-- Resumo do Carrinho -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 style="color: #8e3e63;">Resumo do Carrinho</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between">
+                                <span>Subtotal</span>
+                                <span>R$ 438,85</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Frete</span>
+                                <span>R$ 15,00</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span><strong>Total</strong></span>
+                                <span><strong>R$ 453,85</strong></span>
+                            </li>
+                        </ul>
+
+                        <!-- Cupom de Desconto -->
+                        <div class="mb-3">
+                            <label for="coupon" class="form-label">Código do Cupom</label>
+                            <input type="text" id="coupon" class="form-control" placeholder="Insira o código">
+                            <button class="btn btn-success mt-2" style="background-color: #8e3e63;border: #8e3e63;">Aplicar Cupom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Inclui o Rodapé -->
+    <div id="footer"></div>
+
+</body>
+</html>

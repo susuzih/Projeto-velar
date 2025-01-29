@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Loja</title>
+    <link href="/Modelo teste/front/frontend/public/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Modelo teste/front/frontend/public/assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/assets/css/estilo.css">
+    <link rel="stylesheet" href="../../public/assets/css/login.css">
+</head>
+<body>
+    <!-- Conteúdo -->
+     
+    <div  style="background-color: #cae6b2;" class="login-page">
+        
+        <div class="login-container">
+            <!-- Formulário de Login -->
+            <div class="login-form">
+                <h3 style="color: teal;" class="text-center mb-4">Entrar na Sua Conta</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <a href="/Modelo teste/front/frontend/src/paginas/cadastro.html" class="forgot-password" style="color:teal;">Esqueceu a senha?</a>
+
+                    <div class="button">
+                        
+                        <button style="background-color: teal;" class="button" type="submit" class="btn btn-primary mt-3">Entrar</button>
+                    
+                        
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <div id="img" class="register-form">
+                <style>
+                    #img{
+                        background-image: url(/Modelo\ teste/frontend/public/assets/img/logo\ img.jpg);
+                        background-size: cover;
+                        opacity: 0.8;
+                    }
+                </style>
+                <div>
+                    
+                    <h4 style="color:black;" >Não tem uma conta?</h4>
+                    <p style="color:black;">Crie uma conta agora e aproveite todos os benefícios da nossa loja!</p>
+                    <button onclick="window.location.href = 'cadastro.html';" style="background-color: teal;">Criar Nova Conta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

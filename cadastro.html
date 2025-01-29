@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Loja</title>
+    <link href="/Modelo teste/front/frontend/public/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="/Modelo teste/front/frontend/public/assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/assets/js/principal.js">
+    
+</head>
+<body>
+    <!-- Inclui o Cabeçalho -->
+    <div id="header"></div>
+
+    <!-- Conteúdo -->
+    <main class="container my-5" style="background-color: #cae6b2;">
+        
+        <div class="row justify-content-center">
+            
+            <div class="col-md-6">
+                <fieldset>
+                <legend class="text-center mb-4" style="color:#8e3e63">Cadastro de Usuário</legend>
+                <form>
+                    <fieldset>
+                    <div class="mb-3">
+                        <label for="name" class="form-label" style="color: #8e3e63;">Nome Completo:</label>
+                        <input style="border-radius: 20px;" type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" style="color: #8e3e63;">E-mail:</label>
+                        <input style="border-radius: 20px;" type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label" style="color: #8e3e63;">Senha:</label>
+                        <input style="border-radius: 20px;" type="password" class="form-control" id="password" placeholder="Digite sua senha">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label" style="color: #8e3e63;">Confirmar Senha:</label>
+                        <input style="border-radius: 20px;" type="password" class="form-control" id="confirm-password" placeholder="Confirme sua senha">
+                    </div>
+                    <div>
+                        <style> 
+                            .button{
+                                background-color: teal;
+                                color:#cae6b2;
+                                border: 2px solid #cae6b2;
+                                border-radius: 20px;
+                                width: 150px;
+                                height: 40px;
+                            }
+                            .button:hover{
+                                background-color: #cae6b2;
+                                color: teal;
+                                border: 2px solid teal;
+                            }
+                        </style>
+                        <button class="button" type="submit" class="btn btn-primary w-100">Cadastrar</button>
+
+                    </div>
+
+                </fieldset>
+                </form>
+            </fieldset>
+                
+                <p class="mt-3 text-center">Já tem uma conta? <a href="login.html">Faça login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Inclui o Rodapé -->
+    <div id="footer"></div>
+
+</body>
+</html>
