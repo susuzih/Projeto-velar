@@ -1,0 +1,6 @@
+paleta de cores (Tema maquiagem)
+    --roxo-medio: #8E3E63;
+    --rosa-medio: #D2649A;
+    --amarelo-claro: #F6FAB9;
+    --verde-claro: #CAE6B2;
+    
