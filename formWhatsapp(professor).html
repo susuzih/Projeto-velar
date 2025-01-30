@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Envio de Mensagem - WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #CAE6B2;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-bottom: 8px;
+            font-size: 16px;
+            display: block;
+        }
+        select, input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color:#8E3E63;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: teal;
+        }
+        .response {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color:#8E3E63">Envie uma Mensagem no WhatsApp</h1>
+
+    <form id="messageForm">
+        <label for="codigoPais">Código do País:</label>
+        <select id="codigoPais" name="codigoPais" required>
+            <option value="+55">Brasil (+55)</option>
+            <option value="+1">Estados Unidos (+1)</option>
+            <option value="+44">Reino Unido (+44)</option>
+            <option value="+33">França (+33)</option>
+            <option value="+34">Espanha (+34)</option>
+            <!-- Adicione mais países conforme necessário -->
+        </select>
+
+        <label for="destinatario">Número de Destinatário (sem o código do país):</label>
+        <input type="text" id="destinatario" name="destinatario" placeholder="Ex: 912345678" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <input type="text" id="mensagem" name="mensagem" placeholder="Sua mensagem aqui" required>
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <div class="response" id="responseMessage"></div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            const codigoPais = document.getElementById('codigoPais').value;
+            const destinatario = document.getElementById('destinatario').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            if (!destinatario || !mensagem) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            // Concatenando o código do país com o número de telefone
+            const numeroCompleto = `${codigoPais}${destinatario}`;
+
+            // Criando o URL para a requisição GET
+            const url = `http://localhost:3000/enviar-mensagem?destinatario=${encodeURIComponent(numeroCompleto)}&mensagem=${encodeURIComponent(mensagem)}`;
+
+            // Enviar a requisição GET para o servidor
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('responseMessage').textContent = `Mensagem enviada com sucesso! SID: ${data.sid}`;
+                })
+                .catch(error => {
+                    document.getElementById('responseMessage').textContent = `Erro ao enviar a mensagem: ${error.message}`;
+                });
+        });
+    </script>
+
+</body>
+</html>
